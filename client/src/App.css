@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+  /* overflow: hidden; */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.hero-color{
+  color: #ff4500;
+}
+.form-control:focus {
+  border-color: #41e0fd;
+}
+
+.form-btn-next{
+  background-color: #087ea4 !important;
+  color: white;
+  border-radius: 999px;
+  opacity: .5;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: 600;
+  min-height: 36px;
+  min-width: 75px;
+  line-height: 3rem;
+  border: none;
+}
+.form-btn-next:disabled{
+  /* background-color: #b7c2c6 !important; */
+  color: #16182357;
+  background-color: rgba(22, 24, 35, 0.06)!important;
+}
+.form-btn-next:not([disabled]):hover{
+  opacity: 1;
+}

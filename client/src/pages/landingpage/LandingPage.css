@@ -1,0 +1,292 @@
+.LandingPage{
+    /* height: calc(100vh - 57px); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.LandingPage-start-btn{
+    font-weight: 600;
+    margin-top: 48px;
+    align-items: center;
+    background: transparent;
+    /* color: #fff; */
+    color: rgba(0,0,0,.55);
+    display: inline-flex;
+    justify-content: center;
+    letter-spacing: 0;
+    min-width: 75px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    /* opacity: 0; */
+    transition: all .5s cubic-bezier(0,.61,.28,.92),filter .5s cubic-bezier(0,.61,.28,.92),-webkit-filter .5s cubic-bezier(0,.61,.28,.92);
+    white-space: nowrap;
+    border-radius: 50px;
+    border: 0.0625rem solid #ff4500;
+}
+.LandingPage-start-btn a{
+    text-decoration: none;
+    color: inherit;
+}
+.LandingPage-start-btn:hover{
+    /* opacity: 1; */
+    color: #fff;
+    background-color: #ff4500;
+    border: 1px solid transparent;
+}
+.LandingPage-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.LandingPage-marquee{
+    position: relative;
+    width: 100%;
+}
+.marquee_images{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    background-color: black;
+}
+.marquee_images img{
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    font-family: 'object-fit: cover; object-position: center';
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    transition: opacity 0.2s ease-in-out,-webkit-transform 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: opacity 0.2s ease-in-out,transform 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: opacity 0.2s ease-in-out,transform 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94),-webkit-transform 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.marquee_images_wr_l{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.marquee_images_wr_l .m_images_l > img{
+        transition-delay: 0; 
+}
+.marquee_images_wr_l .m_images_r > img{
+        transition-delay: 0.125s;
+}
+.marquee_images_wr_l .m_images_c > img{
+    transition-delay: 0.375s; 
+}
+.marquee_images_wr_r{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.marquee_images_wr_r .m_images_l > img{
+    transition-delay: 0.4s;
+}
+.marquee_images_wr_r .m_images_r > img{
+    transition-delay: 0.4125s;
+}
+.marquee_images_wr_r .m_images_c > img{
+    transition-delay: 0.250s;
+}
+.m_images_l{
+    display: inline-block;
+    height: 65%;
+    width: 50%;
+    /* // padding: 1px; */
+    overflow: hidden;
+    
+}
+.m_images_r{
+    display: inline-block;
+    height: 65%;
+    width: 50%;
+    /* // padding: 1px; */
+    overflow: hidden;
+    
+}
+.m_images_c{
+    display: inline-block;
+    height: 35%;
+    width: 100%;
+    /* // padding: 1px; */
+    overflow: hidden;
+    
+}
+.LandingPage-marquee.inView .marquee_images img{
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    transition-delay: 0 !important;
+}
+.LandingPage-intro{
+    display: flex;
+    border-bottom: 1px solid #dbdbde;
+}
+.lft{
+    width: 50%;
+}
+.rght{
+    width: 50%;
+}
+.LandingPage-join-intro{
+    text-align: center;
+}
+.LandingPage-join{
+    display: flex;
+}
+.LandingPage-getStarted{
+    height: 90vh;
+    width: 100%;
+    background-color: #ffe3d7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.join-img-container{
+    width: 70%;
+    margin: auto;
+}
+.join-img-container img{
+    width: 100%;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.lp-p{
+    padding: 120px 0;
+}
+.LandingPage-placeholder-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 0;
+}
+.LandingPage-placeholder-container{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 16px;
+}
+.LandingPage-placeholder-logo{
+    font-weight: 600;
+    font-size: 18px;
+}
+.footer-social-link{
+    height: 18px;
+    width: 18px;
+    fill: currentColor;
+}
+.LandingPage-placeholder-links{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+@media only screen and (max-width: 576px) {
+    .LandingPage-start-btn a{
+        font-size: 12px;
+        padding: 8px 24px;
+    }
+    .LandingPage-intro{
+        flex-direction: column;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .LandingPage-join-intro{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .LandingPage-join{
+        flex-direction: column;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .LandingPage-getStarted{
+        /* height: 100vh; */
+    }
+    .lft{
+        width: 100%;
+    }
+    .rght{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .LandingPage-placeholder-socials{
+        padding: 40px 0 12px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 960px) {
+    .LandingPage-start-btn a{
+        font-size: 14px;
+        padding: 12px 32px;
+    }
+    .LandingPage-intro{
+        flex-direction: row;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    .LandingPage-join-intro{
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    .LandingPage-join{
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    .LandingPage-getStarted{
+        /* height: 100vh; */
+    }
+    .lft{
+        text-align: start;
+    }
+    .LandingPage-placeholder-socials{
+        padding: 50px 0 15px;
+    }
+}
+
+@media (min-width: 961px) {
+    .LandingPage-start-btn a{
+        font-size: 16px;
+        padding: 16px 36px;
+    }
+    .LandingPage-hero{
+        
+    }
+    .LandingPage-intro{
+        flex-direction: row;
+        padding: 150px 0;
+    }
+    .LandingPage-join-intro{
+        padding: 120px 0;
+    }
+    .LandingPage-join{
+        padding: 150px 0;
+    }
+    .LandingPage-getStarted{
+        /* height: 90vh; */
+        
+    }
+    .lft{
+        text-align: start;
+    }
+    .LandingPage-placeholder-socials{
+        padding: 72px 0 30px;
+    }
+}

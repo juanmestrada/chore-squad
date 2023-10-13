@@ -1,0 +1,23 @@
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+.leaflet-container{
+    width: 100vw;
+    height: calc(100vh - 60px);
+    background-color: #c6c6c6;
+    /* z-index: 999; */
+    overflow: hidden;
+}
+
+.leaf-iconn{
+    border-radius: 100px;
+    overflow: hidden;
+    border-radius: 100px;
+    overflow: hidden;
+    border: 4px solid #d93a00;
+    box-sizing: border-box;
+}

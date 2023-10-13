@@ -1,0 +1,17 @@
+.Profile{
+    padding: 0;
+}
+.form-group{
+    padding: 16px 0;
+}
+.border-b{
+    border-bottom: 1px solid #dbdbde;
+}
+.Edit-Profile-Avatar{
+    width: 25%;
+    margin: auto;
+    padding: 12px;
+    background: white;
+    border-radius: 50%;
+    overflow: hidden;
+}
