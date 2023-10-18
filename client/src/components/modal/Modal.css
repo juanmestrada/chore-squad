@@ -5,7 +5,7 @@
 }
 .modal-header{
     background-color: #ffffff;
-    border-bottom: 1px solid #131313;
+    border-bottom: 1px solid #ff4500;
 }
 .modal-title{
     font-size: 1rem;
@@ -37,7 +37,7 @@
 .modal-footer{
     justify-content: center;
     background-color: #ffffff;
-    border-top: 1px solid #131313;
+    border-top: 1px solid #ff4500;
 }
 /* .modal-header .btn-close{
     filter: invert(93%) sepia(23%) saturate(5428%) hue-rotate(322deg) brightness(101%) contrast(95%);

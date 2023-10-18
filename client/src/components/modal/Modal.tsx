@@ -3,21 +3,28 @@ import { CloseButton, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import logo from "../../assets/logo.png"
-import Profile from '../../pages/profile/Profile';
+import Profile from '../../pages/profile/EditProfile';
 
-const CustomModal = ({ dogs, modalTitle}) => {
-    
+
+
+type ModalProps = {
+    modalTitle: string;
+    show: boolean;
+    children: React.ReactNode;
+}
+
+const CustomModal = ({ modalTitle, show, children}: ModalProps) => { 
         
     return (
-        <Modal dialogClassName="modal-dialog modal-dialog-scrollable" show={true} backdrop={false} >
+        <Modal dialogClassName="modal-dialog modal-dialog-scrollable" show={show} backdrop={false} >
             <Modal.Header>
                 <Modal.Title>{modalTitle}</Modal.Title>
                 <Link to="/choresquad/map/">
                     <CloseButton aria-label="Hide" />
                 </Link>
             </Modal.Header>
-            <Modal.Body >
-                <Profile />
+            <Modal.Body className="p-0">
+                {children}
             </Modal.Body>
             <Modal.Footer>
                 <p className="fs-6 footer-text"><img src={logo} alt='logo'/> <span>Chore Squad</span></p>

@@ -10,7 +10,7 @@ const LandingPage = () => {
         <div className="LandingPage">
             <div className="container LandingPage-hero">
                 <h5 className='hero-color'>ChoreSquad</h5>
-                <h1>Help when you need it.</h1>
+                <h1>Help when you need it</h1>
                 {user ? <h2>
                     Welcome Back, {user.firstName || user.username}
                 </h2> : (<button className="LandingPage-start-btn"><NavLink to="/choresquad/login">Get Started</NavLink></button>)}
@@ -43,7 +43,7 @@ const LandingPage = () => {
             </div>
             <div className='container LandingPage-intro'>
                 <div className='lft'>
-                    <h1>Meet trusted people from your community to get the job done.</h1>
+                    <h1>Meet trusted people from your community to get the job done</h1>
                 </div>
                 <div className='rght'>
                     <p>When you're short on time but your home project must get done, get help from skilled people in your community and support small businesses.</p>
@@ -56,18 +56,18 @@ const LandingPage = () => {
             </div>
             <div className='container LandingPage-join'>
                 <div className='lft'>
-                    <h1>Earn extra income doing what you already know.</h1>
+                    <h1>Earn extra income doing what you already know</h1>
                     <p>Put your skills to work and get paid doing what you're good at.</p>
                     <button className="LandingPage-start-btn"><NavLink to="/choresquad/login">Join today</NavLink></button>
                 </div>
                 <div className='rght'>
                     <div className='join-img-container'>
-                        <img src={carpenter} />
+                        <img src={carpenter} alt='carpenter'/>
                     </div>
                 </div>
             </div>
             <div className='LandingPage-getStarted'>
-                <h1>Join ChoreSquad today.</h1>
+                <h1>Join ChoreSquad today</h1>
                 <button className="LandingPage-start-btn"><NavLink to="/choresquad/login">Get Started</NavLink></button>
             </div>
             <div className='container LandingPage-footer'>

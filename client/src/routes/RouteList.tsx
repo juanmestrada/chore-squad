@@ -4,7 +4,9 @@ import LandingPage from '../pages/landingpage/LandingPage';
 import LogIn from '../auth/Login';
 import SignUp from '../auth/Signup';
 import Map from "../pages/map/Map";
-import Profile from "../pages/profile/Profile";
+
+import EditProfile from "../pages/profile/EditProfile";
+import UserProfile from "../pages/profile/UserProfile";
 
 import RequireAuth from "../auth/RequireAuth";
 import RedirectUser from "../auth/RedirectUser";
@@ -24,8 +26,9 @@ const RouteList = () => {
             
             {/* protected routes */}
             <Route element={<RequireAuth  />}>
-                <Route path="/choresquad/map/*" element={<Map />} >
-                    <Route path="/choresquad/map/*/profile" element={<Profile />} /> 
+                <Route path="/choresquad/map/" element={<Map />} >
+                    <Route path="edit_profile" element={<EditProfile />} />
+                    <Route path=":name" element={<UserProfile />} />
                 </Route>
             </Route>
            
