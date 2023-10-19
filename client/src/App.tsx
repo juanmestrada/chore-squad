@@ -1,7 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import UserProvider from "./context/UserContext";
 import './App.css';
-import Nav from './components/nav/Nav';
 
 import RouteList from "./routes/RouteList";
 // import Loading from "./common/Loading";
@@ -15,7 +14,6 @@ function App() {
     <div className="App"> 
       <BrowserRouter>
         <UserProvider>
-          {user && <Nav />}
           <RouteList />
         </UserProvider>
       </BrowserRouter>

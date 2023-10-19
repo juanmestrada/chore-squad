@@ -1,7 +1,8 @@
 
 .modal-content{
     height: 100%;
-    background-color: #c6c6c6;
+    /* background-color: #c6c6c6; */
+    background-color: #dfdfdf;
 }
 .modal-header{
     background-color: #ffffff;

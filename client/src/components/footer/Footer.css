@@ -1,0 +1,34 @@
+.Footer{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    color: #131313;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.Footer-Container{
+    height: 100%;
+}
+
+.Footer-Btn-Container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Footer-Btn{
+    cursor: pointer;
+}
+
+.Footer-Btn-svg{
+    width: 30px;
+    opacity: .75;
+}
+
+.Footer-Btn-svg:hover{
+    opacity: 1;
+}

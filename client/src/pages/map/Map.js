@@ -5,6 +5,9 @@ import { useState, useEffect } from 'react';
 import './Map.css';
 import SeedUsers from "../../api/seed";
 
+import CustomNav from '../../components/nav/Nav';
+import Footer from '../../components/footer/Footer';
+
 import Loading from "../../common/Loading";
 
 
@@ -64,28 +67,32 @@ const Map = () => {
         navigate(e.target.options.icon.options.win_url);
     }
     return (
-        <MapContainer center={[defaultCoords.lat, defaultCoords.long]} zoom={12} scrollWheelZoom={true}>
-            <TileLayer
-                attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
-                url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
-            />    
-            {mockUsers.isLoading && <Loading />}        
-            
-            {!mockUsers.isLoading && mockUsers.data.map(u => 
-                 (
-                    <Marker 
-                        key={u.username} 
-                        position={u.position}
-                        icon={u.icon} 
-                        eventHandlers={{
-                            click: handleClick
-                        }} 
-                    />
-                )
-            )}  
+        <>
+            <CustomNav />  
+            <MapContainer center={[defaultCoords.lat, defaultCoords.long]} zoom={12} scrollWheelZoom={true}>
+                <TileLayer
+                    attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+                    url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
+                />  
+                {mockUsers.isLoading && <Loading />}        
                 
-            <Outlet />
-        </MapContainer>
+                {!mockUsers.isLoading && mockUsers.data.map(u => 
+                    (
+                        <Marker 
+                            key={u.username} 
+                            position={u.position}
+                            icon={u.icon} 
+                            eventHandlers={{
+                                click: handleClick
+                            }} 
+                        />
+                    )
+                )}  
+                    
+                <Outlet />
+            </MapContainer>
+            <Footer/>
+        </>
     )
 }
 
