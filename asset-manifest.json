@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chore-squad/static/css/main.2d88dfe5.css",
-    "main.js": "/chore-squad/static/js/main.63178dff.js",
+    "main.js": "/chore-squad/static/js/main.b0ae6621.js",
     "static/js/141.2bbc2838.chunk.js": "/chore-squad/static/js/141.2bbc2838.chunk.js",
     "static/js/209.c12a40d9.chunk.js": "/chore-squad/static/js/209.c12a40d9.chunk.js",
     "static/js/878.21631704.chunk.js": "/chore-squad/static/js/878.21631704.chunk.js",
@@ -14,7 +14,7 @@
     "index.html": "/chore-squad/index.html",
     "static/media/user-avatar.svg": "/chore-squad/static/media/user-avatar.051babee3629a1103975807706560dbd.svg",
     "main.2d88dfe5.css.map": "/chore-squad/static/css/main.2d88dfe5.css.map",
-    "main.63178dff.js.map": "/chore-squad/static/js/main.63178dff.js.map",
+    "main.b0ae6621.js.map": "/chore-squad/static/js/main.b0ae6621.js.map",
     "141.2bbc2838.chunk.js.map": "/chore-squad/static/js/141.2bbc2838.chunk.js.map",
     "209.c12a40d9.chunk.js.map": "/chore-squad/static/js/209.c12a40d9.chunk.js.map",
     "878.21631704.chunk.js.map": "/chore-squad/static/js/878.21631704.chunk.js.map",
@@ -22,6 +22,6 @@
   },
   "entrypoints": [
     "static/css/main.2d88dfe5.css",
-    "static/js/main.63178dff.js"
+    "static/js/main.b0ae6621.js"
   ]
 }
