@@ -6,10 +6,10 @@ const Footer = () => {
     const navigate = useNavigate();
 
     const handleInboxClick = () => {
-        navigate("/choresquad/map/inbox");
+        navigate("/chore-squad/map/inbox");
     }
     const handleClick = () => {
-        navigate("/choresquad/map/edit_profile");
+        navigate("/chore-squad/map/edit_profile");
     }
     return (
         <div className="Footer">

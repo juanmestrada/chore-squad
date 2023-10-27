@@ -8,7 +8,7 @@ const RequireAuth = () => {
     return (
         user
             ? <Outlet />
-            : <Navigate to="/choresquad/login" state={{ from: location }} replace />
+            : <Navigate to="/chore-squad/login" state={{ from: location }} replace />
     );
 }
 

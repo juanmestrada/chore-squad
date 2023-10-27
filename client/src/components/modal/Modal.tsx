@@ -16,7 +16,7 @@ const CustomModal = ({ modalTitle, show, children}: ModalProps) => {
         <Modal dialogClassName="modal-dialog modal-dialog-scrollable" show={show} backdrop={true} >
             <Modal.Header>
                 <Modal.Title>{modalTitle}</Modal.Title>
-                <Link to="/choresquad/map/">
+                <Link to="/chore-squad/map/">
                     <CloseButton aria-label="Hide" />
                 </Link>
             </Modal.Header>

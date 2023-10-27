@@ -11,7 +11,7 @@ const compHeader = (
 
 const loginAltLink = (
     <div>
-        Don't have an account? <span className="tr-pri-c"><a href="/choresquad/signup">Sign up</a></span>
+        Don't have an account? <span className="tr-pri-c"><a href="/chore-squad/signup">Sign up</a></span>
     </div>
 );
 

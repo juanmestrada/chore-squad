@@ -135,7 +135,7 @@ const Map = () => {
             iconUrl: `${image}`,
             iconSize: [80, 80],
             className: 'leaf-iconn',
-            win_url:`/choresquad/map/${username.toLowerCase()}`
+            win_url:`/chore-squad/map/${username.toLowerCase()}`
         });
     }
 

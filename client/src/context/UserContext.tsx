@@ -69,7 +69,7 @@ export default function UserProvider({children} : UserProviderProps){
         },
         onSuccess() {
             // redirect user to login page on signup success
-            navigate("/choresquad/login");
+            navigate("/chore-squad/login");
 
             // set success message
             setSuccessMessage("Account created");

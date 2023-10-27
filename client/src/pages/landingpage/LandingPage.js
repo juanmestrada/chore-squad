@@ -13,7 +13,7 @@ const LandingPage = () => {
                 <h1>Help when you need it</h1>
                 {user ? <h2>
                     Welcome Back, {user.fullName || user.username}
-                </h2> : (<button className="LandingPage-start-btn"><NavLink to="/choresquad/login">Get Started</NavLink></button>)}
+                </h2> : (<button className="LandingPage-start-btn"><NavLink to="/chore-squad/login">Get Started</NavLink></button>)}
             </div>
             <div className='LandingPage-marquee inView'>
                 <div className="marquee_images">
@@ -47,7 +47,7 @@ const LandingPage = () => {
                 </div>
                 <div className='rght'>
                     <p>When you're short on time but your home project must get done, get help from skilled people in your community and support small businesses.</p>
-                    <button className="LandingPage-start-btn"><NavLink to="/choresquad/login">Find help</NavLink></button>
+                    <button className="LandingPage-start-btn"><NavLink to="/chore-squad/login">Find help</NavLink></button>
                 </div>
             </div>
             <div className='LandingPage-join-intro'>
@@ -58,7 +58,7 @@ const LandingPage = () => {
                 <div className='lft'>
                     <h1>Earn extra income doing what you already know</h1>
                     <p>Put your skills to work and get paid doing what you're good at.</p>
-                    <button className="LandingPage-start-btn"><NavLink to="/choresquad/login">Join today</NavLink></button>
+                    <button className="LandingPage-start-btn"><NavLink to="/chore-squad/login">Join today</NavLink></button>
                 </div>
                 <div className='rght'>
                     <div className='join-img-container'>
@@ -68,7 +68,7 @@ const LandingPage = () => {
             </div>
             <div className='LandingPage-getStarted'>
                 <h1>Join ChoreSquad today</h1>
-                <button className="LandingPage-start-btn"><NavLink to="/choresquad/login">Get Started</NavLink></button>
+                <button className="LandingPage-start-btn"><NavLink to="/chore-squad/login">Get Started</NavLink></button>
             </div>
             <div className='container LandingPage-footer'>
                 <div className='LandingPage-placeholder-socials'>

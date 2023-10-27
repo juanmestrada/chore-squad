@@ -20,17 +20,17 @@ const RouteList = () => {
     return (
         <Routes>
             {/* Public routes */}
-            <Route path="/choresquad/" element={<LandingPage />} />
+            <Route path="/chore-squad/" element={<LandingPage />} />
 
             {/* Redirect if signed in */}
             <Route element={<RedirectUser  />}>
-                <Route path="/choresquad/login" element={<LogIn />} />
-                <Route path="/choresquad/signup" element={<SignUp  />} />
+                <Route path="/chore-squad/login" element={<LogIn />} />
+                <Route path="/chore-squad/signup" element={<SignUp  />} />
             </Route>
             
             {/* protected routes */}
             <Route element={<RequireAuth  />}>
-                <Route path="/choresquad/map/" element={<Map />} >
+                <Route path="/chore-squad/map/" element={<Map />} >
                     <Route path="channel/new" element={<NewChannel />} />
                     <Route path="inbox" element={<Inbox />} />
                     <Route path="edit_profile" element={<EditProfile />} />

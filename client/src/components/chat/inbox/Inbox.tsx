@@ -37,7 +37,7 @@ const Inbox = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate("/choresquad/map/channel/new");
+        navigate("/chore-squad/map/channel/new");
     }
 
     return (

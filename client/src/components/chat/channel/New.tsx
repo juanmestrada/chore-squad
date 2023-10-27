@@ -30,7 +30,7 @@ const NewChannel = () => {
             }).create();
         },
         onSuccess() {
-            navigate("/choresquad/map/inbox");
+            navigate("/chore-squad/map/inbox");
         },
     })
 

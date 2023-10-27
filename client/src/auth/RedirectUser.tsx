@@ -8,7 +8,7 @@ const RedirectUser = () => {
     return (
         !user
             ? <Outlet />
-            : <Navigate to="/choresquad/map" state={{ from: location }} replace />
+            : <Navigate to="/chore-squad/map" state={{ from: location }} replace />
     );
 }
 

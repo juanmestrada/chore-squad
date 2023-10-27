@@ -11,7 +11,7 @@ const compHeader = (
 
 const signUpAltLink = (
     <div>
-        Already have an account? <span><a href="/choresquad/login">Log in</a></span>
+        Already have an account? <span><a href="/chore-squad/login">Log in</a></span>
     </div>
 );
 

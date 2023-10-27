@@ -19,15 +19,15 @@ const CustomNav = () => {
     
     const handleInboxClick = () => {
         setShow(false);
-        navigate(`/choresquad/map/inbox`);
+        navigate(`/chore-squad/map/inbox`);
     }
     const handleEditProfileClick = () => {
         setShow(false);
-        navigate("/choresquad/map/edit_profile");
+        navigate("/chore-squad/map/edit_profile");
     }
     const handleProfileClick = () => {
         setShow(false);
-        navigate(`/choresquad/map/${user?.username}`);
+        navigate(`/chore-squad/map/${user?.username}`);
     }
     return(
         <div className='Nav'>
