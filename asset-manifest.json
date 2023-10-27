@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/chore-squad/static/css/main.2d88dfe5.css",
+    "main.js": "/chore-squad/static/js/main.63178dff.js",
+    "static/js/141.2bbc2838.chunk.js": "/chore-squad/static/js/141.2bbc2838.chunk.js",
+    "static/js/209.c12a40d9.chunk.js": "/chore-squad/static/js/209.c12a40d9.chunk.js",
+    "static/js/878.21631704.chunk.js": "/chore-squad/static/js/878.21631704.chunk.js",
+    "static/js/829.ba48c55c.chunk.js": "/chore-squad/static/js/829.ba48c55c.chunk.js",
+    "static/media/EmojiOneColor.woff2": "/chore-squad/static/media/EmojiOneColor.90ee5fb894c8d349bc54.woff2",
+    "static/media/NotoColorEmoji-flags.woff2": "/chore-squad/static/media/NotoColorEmoji-flags.148141acfb7ce6e4f383.woff2",
+    "static/media/carpenter.jpeg": "/chore-squad/static/media/carpenter.e137f4c10e50b821eb00.jpeg",
+    "static/media/logo.png": "/chore-squad/static/media/logo.67ea4ddfdabc3f83c24d.png",
+    "static/media/sad-face.svg": "/chore-squad/static/media/sad-face.b3d8869e340a8a07e695b6e7d9926728.svg",
+    "index.html": "/chore-squad/index.html",
+    "static/media/user-avatar.svg": "/chore-squad/static/media/user-avatar.051babee3629a1103975807706560dbd.svg",
+    "main.2d88dfe5.css.map": "/chore-squad/static/css/main.2d88dfe5.css.map",
+    "main.63178dff.js.map": "/chore-squad/static/js/main.63178dff.js.map",
+    "141.2bbc2838.chunk.js.map": "/chore-squad/static/js/141.2bbc2838.chunk.js.map",
+    "209.c12a40d9.chunk.js.map": "/chore-squad/static/js/209.c12a40d9.chunk.js.map",
+    "878.21631704.chunk.js.map": "/chore-squad/static/js/878.21631704.chunk.js.map",
+    "829.ba48c55c.chunk.js.map": "/chore-squad/static/js/829.ba48c55c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d88dfe5.css",
+    "static/js/main.63178dff.js"
+  ]
+}
