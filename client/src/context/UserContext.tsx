@@ -47,7 +47,7 @@ type UserProviderProps = {
     children: React.ReactNode
 } 
 
-const URL = 'http://localhost:5000/auth';
+const URL = 'https://chore-squad-365c5f832289.herokuapp.com/auth';
 
 export default function UserProvider({children} : UserProviderProps){
     // user
