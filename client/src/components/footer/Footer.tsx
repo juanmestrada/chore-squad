@@ -5,6 +5,9 @@ import "./Footer.css";
 const Footer = () => {
     const navigate = useNavigate();
 
+    const handleInboxClick = () => {
+        navigate("/choresquad/map/inbox");
+    }
     const handleClick = () => {
         navigate("/choresquad/map/edit_profile");
     }
@@ -12,7 +15,7 @@ const Footer = () => {
         <div className="Footer">
             <Container className='Footer-Container'>
                 <div className='Footer-Btn-Container'>
-                    <div className='Footer-Btn'>
+                    <div className='Footer-Btn' onClick={handleInboxClick}>
                         <svg viewBox="0 0 24 24" className="Footer-Btn-svg"><title>Inbox</title><g><path d="M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v13c0 1.381-1.119 2.5-2.5 2.5h-15c-1.381 0-2.5-1.119-2.5-2.5v-13zm2.5-.5c-.276 0-.5.224-.5.5v2.764l8 3.638 8-3.636V5.5c0-.276-.224-.5-.5-.5h-15zm15.5 5.463l-8 3.636-8-3.638V18.5c0 .276.224.5.5.5h15c.276 0 .5-.224.5-.5v-8.037z"></path></g></svg>
                     </div>
 

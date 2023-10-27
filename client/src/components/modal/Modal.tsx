@@ -5,7 +5,7 @@ import logo from "../../assets/logo.png"
 
 
 type ModalProps = {
-    modalTitle: string;
+    modalTitle?: string;
     show: boolean;
     children: React.ReactNode;
 }

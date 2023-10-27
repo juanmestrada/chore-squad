@@ -12,7 +12,7 @@ const LandingPage = () => {
                 <h5 className='hero-color'>ChoreSquad</h5>
                 <h1>Help when you need it</h1>
                 {user ? <h2>
-                    Welcome Back, {user.firstName || user.username}
+                    Welcome Back, {user.fullName || user.username}
                 </h2> : (<button className="LandingPage-start-btn"><NavLink to="/choresquad/login">Get Started</NavLink></button>)}
             </div>
             <div className='LandingPage-marquee inView'>

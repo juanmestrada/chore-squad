@@ -56,3 +56,9 @@
 .form-btn-next:not([disabled]):hover{
   opacity: 1;
 }
+
+.toast-container{
+  margin-right: 10px;
+  margin-bottom: 10px;
+  z-index: 9999;
+}

@@ -1,0 +1,84 @@
+.Inbox{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.str-chat {
+    height: 100%;
+}
+
+.str-chat-channel.messaging .str-chat__main-panel {
+    padding: var(--xxs-p) var(--xxs-p) 0;
+}
+
+.messaging.str-chat .str-chat__header-livestream {
+    padding-left: var(--sm-p);
+    padding-right: var(--sm-p);
+}
+
+.str-chat__header-hamburger {
+    display: flex;
+}
+.back-btn{
+    font-size: 30px;
+}
+
+/* .str-chat-channel-list--open{
+    width: 100%;
+} */
+.str-chat__channel-list-react{
+    width: 100%;
+}
+.str-chat.messaging .str-chat__input-flat {
+    padding: var(--xs-p) var(--xs-p);
+}
+
+.str-chat__channel-list-messenger {
+    min-width: 100%;
+}
+
+.str-chat__container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    z-index: 1001;
+}
+
+.Inbox-New-Channel-btn{
+    position: fixed;
+    bottom: 100px;
+    right: 75px;
+    background-color: rgba(169, 169, 169, .45);
+    box-sizing: content-box;
+    padding: 8px;
+    border-radius: 50px;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 600ms ease-in 300ms;
+}
+.modal.show .Inbox-New-Channel-btn {
+    opacity: .75;
+}
+
+.Inbox-New-Channel-btn-svg{
+    width: 28px;
+}
+
+@media screen and (max-width: 960px){
+    .str-chat-channel-list.messaging, .str-chat-channel-list.team, .str-chat-channel-list.commerce {
+        position: absolute;
+        left: 0;
+        min-height: 100%;
+    }    
+    .str-chat-channel-list .str-chat__channel-list-messenger {
+        padding: 0;
+    }
+}
+
+/* @media screen and (min-width: 961px){
+    .str-chat-channel-list:not(.str-chat-channel-list--open){
+        width: 0;
+    }
+} */
+

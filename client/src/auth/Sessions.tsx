@@ -8,12 +8,12 @@ const USERNAME_REGEX = /^[a-z]{1}[a-z0-9-_]{3,14}$/;
 const FULLNAME_REGEX = /^[a-z]{1}[a-z0-9-_ ]{3,24}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
-interface InitialState{
-    fullName: string;
-    username: string;
-    password: string;
-    confirmPassword: string;
-}
+// interface InitialState{
+//     fullName: string;
+//     username: string;
+//     password: string;
+//     confirmPassword: string;
+// }
 
 interface SessionProps{
     componentHeader: React.ReactNode;
@@ -23,15 +23,16 @@ interface SessionProps{
 }
 
 const Session = ({ componentHeader, btnText, altLink, isLogin }: SessionProps) => {
-    const { user, signup, login } = useAuth();
+    const { signup, login, setErrorMessage } = useAuth();
  
     const userRef = useRef<HTMLInputElement>(null);
-    const errRef = useRef<HTMLInputElement>(null);
 
+    // username
     const [userName, setUserName] = useState<string>('');
     const [validUserName, setValidUserName] = useState<boolean>(false);
     const [userNameFocus, setUserNameFocus] = useState<boolean>(false);
 
+    // fullName
     const [userFullName, setUserFullName] = useState<string>('');
     const [validUserFullName, setValidUserFullName] = useState<boolean>(false);
     const [userFullNameFocus, setUserFullNameFocus] = useState<boolean>(false);
@@ -41,11 +42,10 @@ const Session = ({ componentHeader, btnText, altLink, isLogin }: SessionProps) =
     const [validPwd, setValidPwd] = useState<boolean>(false);
     const [pwdFocus, setPwdFocus] = useState<boolean>(false);
 
+    // password confirmation
     const [matchPwd, setMatchPwd] = useState<string>('');
     const [validMatch, setValidMatch] = useState<boolean>(false);
     const [matchFocus, setMatchFocus] = useState<boolean>(false);
-
-    const [errMsg, setErrMsg] = useState<string>('');
 
     useEffect(() => {
         userRef.current?.focus();
@@ -66,11 +66,6 @@ const Session = ({ componentHeader, btnText, altLink, isLogin }: SessionProps) =
         setValidPwd(PWD_REGEX.test(pwd));
         setValidMatch(pwd === matchPwd);
     }, [pwd, matchPwd])
-
-    useEffect(() => {
-        // clear error message
-        setErrMsg('');
-    }, [userName, userFullName, pwd, matchPwd])
     
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -80,43 +75,37 @@ const Session = ({ componentHeader, btnText, altLink, isLogin }: SessionProps) =
         const check2 = FULLNAME_REGEX.test(userFullName);
         const check3 = PWD_REGEX.test(pwd);
 
-        console.log("checks :", check1, check2, check3);
-
         // prevent submission with JS hack
         if(isLogin){
             // prevent submission hack for login
             if (!check1 || !check3) {
-                setErrMsg("Invalid entry.");
+                setErrorMessage("Invalid entry.");
                 return;
             }
         } else {
             // prevent submission hack for signup
             if (!check1 || !check2 || !check3) {
-                setErrMsg("Invalid entry.");
+                setErrorMessage("Invalid entry.");
                 return;
             }
         }
         
+        // user image
         const imageUrl = `https://getstream.io/random_svg/?name=${userFullName}`;
 
-        // session function to use if login form or signup form
+        // session function for login or signup
         if(isLogin){
-            login.mutate(userName);
+            login.mutate({id: userName, hashedPassword: pwd});
         } else {
-            signup.mutate({ id: userName, name: userName, hashedPassword: pwd, fullName: userFullName, image: imageUrl });
+            signup.mutate({ id: userName, username: userName, hashedPassword: pwd, fullName: userFullName, image: imageUrl });
         }
-
-        // todo: set up form error messages
         
     }
     return (
         <div className="Sessions">
             <div className="mb-5">
                 {componentHeader}
-                {user && JSON.stringify(user) }
             </div>
-
-            <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
 
             <form className="new_user_session needs-validation" id="new_user_session" onSubmit={handleSubmit}>
                 <div className="form-group mb-2">
@@ -226,10 +215,10 @@ const Session = ({ componentHeader, btnText, altLink, isLogin }: SessionProps) =
                 <div className="form-group mb-2">
                     {isLogin ? 
                         (
-                            <button name="button" type="submit" className="form-btn-next rounded-pill w-100" disabled={!validUserName || !validPwd  ? true : false}>{btnText}</button>
+                            <button name="button" type="submit" className="form-btn-next rounded-pill w-100" disabled={(login.isLoading || !validUserName || !validPwd)  ? true : false}>{btnText}</button>
                         ) : 
                         (
-                            <button name="button" type="submit" className="form-btn-next rounded-pill w-100" disabled={!validUserName || !validUserFullName || !validPwd || !validMatch  ? true : false}>{btnText}</button>
+                            <button name="button" type="submit" className="form-btn-next rounded-pill w-100" disabled={(signup.isLoading || !validUserName || !validUserFullName || !validPwd || !validMatch)  ? true : false}>{btnText}</button>
                         )
                     }
                 </div>

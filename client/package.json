@@ -22,6 +22,7 @@
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
+    "react-select": "^5.7.7",
     "stream-chat": "^8.11.0",
     "stream-chat-react": "^10.10.1",
     "typescript": "^4.9.5",
@@ -50,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.7"
   }
 }

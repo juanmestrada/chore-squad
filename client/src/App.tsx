@@ -1,22 +1,23 @@
-import { BrowserRouter } from "react-router-dom";
-import UserProvider from "./context/UserContext";
 import './App.css';
-
-import RouteList from "./routes/RouteList";
-// import Loading from "./common/Loading";
-
 import { useAuth } from "./context/UserContext";
+import ToastContainer from 'react-bootstrap/ToastContainer';
+import ErrorAlert from "./components/alerts/ErrorAlert";
+import SuccessAlert from './components/alerts/SuccessAlert';
+import RouteList from "./routes/RouteList";
 
 function App() {
-  const  user = useAuth();
+  const {errorMessage, setErrorMessage, successMessage, setSuccessMessage} = useAuth();
 
   return (
-    <div className="App"> 
-      <BrowserRouter>
-        <UserProvider>
-          <RouteList />
-        </UserProvider>
-      </BrowserRouter>
+    <div className="App">
+      {(errorMessage || successMessage) && (
+        <ToastContainer  className="position-fixed bottom-0 end-0">
+          {errorMessage && (<ErrorAlert message={errorMessage} clearmessage={setErrorMessage} />)}
+          {successMessage && (<SuccessAlert message={successMessage} clearmessage={setSuccessMessage} />)}
+        </ToastContainer>
+      )}
+  
+      <RouteList />
     </div>
   );
 }

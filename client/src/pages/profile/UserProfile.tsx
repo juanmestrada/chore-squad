@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useAuth, User } from "../../context/UserContext";
 
 import "./UserProfile.css";
 
@@ -8,7 +9,7 @@ import SeedUsers from "../../api/seed";
 import CustomModal from '../../components/modal/Modal';
 import Loading from "../../common/Loading";
 
-type MockUSerProps = {
+type MockUserProps = {
     username: string;
     bio: string;
     fullName: string;
@@ -20,27 +21,38 @@ type MockUSerProps = {
 }
 
 const UserProfile = () => {
-    const [clickedUser, setClickedUser] = useState<MockUSerProps | undefined>();
+    const [clickedUser, setClickedUser] = useState<MockUserProps | User>();
     const { name } = useParams();
+
+    const { user } = useAuth();
     
     useEffect(() => {
-        const getUsers = async () => {
-            try {
-                
-                const current_user = await SeedUsers.getUser(name);
-                
-                if(current_user){
-                    setClickedUser(current_user[0]);
-                }
-                
-            } catch (error) {
-                console.log(error)
-            }
+        // profile belongs to current user
+        if(name === user?.username){
+            // set clickedUser to logged in user
+            setClickedUser(user);
+
+            return;
         }
+        
+        // profile belongs to mock user
+        getUserProfile();
+    }, [])
 
-        getUsers();
-    }, [name])
-
+    const getUserProfile = async () => {
+        try {
+            // retrieve mock user's profile
+            const current_user = await SeedUsers.getUser(name);
+            
+            // set clickedUser to current_user retrieved from SeedUsers
+            if(current_user){
+                setClickedUser(current_user[0]);
+            }
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
     
     if(!clickedUser) return <Loading/>;
     
@@ -61,7 +73,7 @@ const UserProfile = () => {
                         <h6>Skills</h6>
 
                         <div className="User-Profile-Skills-container">
-                            {clickedUser.skills.map(s => (<div className="User-Profile-skill" key={s} >{s}</div>))}
+                            {clickedUser.skills && clickedUser.skills!.map(s => (<div className="User-Profile-skill" key={s} >{s}</div>))}
                         </div>
                     </div>
 
@@ -90,9 +102,13 @@ const UserProfile = () => {
                     </div>
                 </div>
             </div>
-            <div className='User-Profile-Mssg-Btn'>
-                <svg viewBox="0 0 24 24" className="User-Profile-Mssg-svg"><title>Message</title><g><path d="M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v13c0 1.381-1.119 2.5-2.5 2.5h-15c-1.381 0-2.5-1.119-2.5-2.5v-13zm2.5-.5c-.276 0-.5.224-.5.5v2.764l8 3.638 8-3.636V5.5c0-.276-.224-.5-.5-.5h-15zm15.5 5.463l-8 3.636-8-3.638V18.5c0 .276.224.5.5.5h15c.276 0 .5-.224.5-.5v-8.037z"></path></g></svg>
-            </div>
+
+            {(clickedUser.username !== user!.username) && (
+                <div className='User-Profile-Mssg-Btn'>
+                    <svg viewBox="0 0 24 24" className="User-Profile-Mssg-svg"><title>Message</title><g><path d="M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v13c0 1.381-1.119 2.5-2.5 2.5h-15c-1.381 0-2.5-1.119-2.5-2.5v-13zm2.5-.5c-.276 0-.5.224-.5.5v2.764l8 3.638 8-3.636V5.5c0-.276-.224-.5-.5-.5h-15zm15.5 5.463l-8 3.636-8-3.638V18.5c0 .276.224.5.5.5h15c.276 0 .5-.224.5-.5v-8.037z"></path></g></svg>
+                </div>)
+            }
+            
         </ CustomModal>
         
     )

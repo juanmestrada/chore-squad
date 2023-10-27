@@ -4,6 +4,9 @@ import './index.css';
 import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 import App from './App';
 
+import UserProvider from "./context/UserContext";
+import { BrowserRouter } from "react-router-dom";
+
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -19,7 +22,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <BrowserRouter>
+        <UserProvider>
+          <App />
+        </UserProvider>
+      </BrowserRouter>
     </QueryClientProvider>
   </React.StrictMode>
 );

@@ -1,0 +1,41 @@
+.NotFound{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: #777777;
+}
+
+.NotFound > img{
+    width: 16%;
+    filter: invert(40%) sepia(99%) saturate(0%) hue-rotate(158deg) brightness(96%) contrast(84%);
+}
+
+.NotFound-text{
+    font-size: 100px;
+    margin-bottom: 0;
+}
+
+.NotFound-secondary{
+    width: 80%;
+}
+
+@media (max-width: 992px) {
+    .NotFound > img{
+        width: 12%;
+    }
+    .NotFound-text{
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 576px) {
+    .NotFound > img{
+        width: 36%;
+    }
+    .NotFound-text{
+        font-size: 48px;
+    }
+}
+

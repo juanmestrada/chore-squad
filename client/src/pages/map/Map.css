@@ -6,18 +6,24 @@
 }
 
 .leaflet-container{
-    width: 100vw;
-    height: calc(100vh - 100px);
-    background-color: #c6c6c6;
-    /* z-index: 999; */
-    overflow: hidden;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background-color: #c6c6c6;
+  /* z-index: 999; */
+  overflow: hidden;
 }
 
 .leaf-iconn{
-    border-radius: 100px;
-    overflow: hidden;
-    border-radius: 100px;
-    overflow: hidden;
-    border: 4px solid #d93a00;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  font-family: 'object-fit: cover; object-position: center';
+  border-radius: 100px;
+  overflow: hidden;
+  border-radius: 100px;
+  overflow: hidden;
+  background-color: #c6c6c6;
+  border: 4px solid #d93a00;
 }

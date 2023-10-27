@@ -10,8 +10,23 @@
 .Edit-Profile-Avatar{
     width: 25%;
     margin: auto;
-    padding: 12px;
     background: white;
     border-radius: 50%;
     overflow: hidden;
+}
+
+.Edit-Profile-Avatar > img:not(.user-image){
+    padding: 12px;
+}
+
+.skills-info{
+    font-size: .75rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.Edit-Profile-Form .form-control-plaintext:focus{
+    outline: none;
 }
