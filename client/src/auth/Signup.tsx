@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Session from "./Sessions";
 
 const signUpBtn = "Sign Up";
@@ -11,7 +12,7 @@ const compHeader = (
 
 const signUpAltLink = (
     <div>
-        Already have an account? <span><a href="/chore-squad/login">Log in</a></span>
+        Already have an account? <span><NavLink to="/chore-squad/login" >Log in</NavLink></span>
     </div>
 );
 
