@@ -1,3 +1,4 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from "../../context/UserContext";
 import './LandingPage.css';
@@ -8,10 +9,10 @@ const LandingPage = () => {
     
     return (
         <div className="LandingPage">
-            <div className="container LandingPage-hero">
+            <div className="container LandingPage-hero" >
                 <h5 className='hero-color'>ChoreSquad</h5>
                 <h1>Help when you need it</h1>
-                {user ? <h2>
+                {user ? <h2 data-testid="landingpage-greeting">
                     Welcome Back, {user.fullName || user.username}
                 </h2> : (<button className="LandingPage-start-btn"><NavLink to="/chore-squad/login">Get Started</NavLink></button>)}
             </div>

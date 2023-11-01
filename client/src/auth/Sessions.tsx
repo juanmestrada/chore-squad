@@ -169,7 +169,7 @@ const Session = ({ componentHeader, btnText, altLink, isLogin }: SessionProps) =
                             id="floatingPassword"
                             className={`form-control shadow-sm bg-white rounded ${pwd && !validPwd ? "is-invalid" : ""}`}
                             autoComplete="off"
-                            placeholder="Password"
+                            placeholder="Password..."
                             onChange={(e) => setPwd(e.target.value)}
                             value={pwd}
                             required
@@ -195,7 +195,7 @@ const Session = ({ componentHeader, btnText, altLink, isLogin }: SessionProps) =
                             id="floatingConfirmPassword"
                             className={`form-control shadow-sm bg-white rounded ${matchPwd && !validMatch ? "is-invalid" : ""}`}
                             autoComplete="off"
-                            placeholder="Confirm Password"
+                            placeholder="Confirm password"
                             onChange={(e) => setMatchPwd(e.target.value)}
                             value={matchPwd}
                             required
