@@ -41,9 +41,9 @@ This project was built using:
 - Responsive design
 
 
-<img src="./client/src/assets/choresquad-profile.PNG" alt="choresquad profile/>
+<img src="./client/src/assets/choresquad-profile.PNG" alt="choresquad profile" />
 
-<img src="./client/src/assets/choresquad-inbox.PNG" alt="choresquad inbox"/>
+<img src="./client/src/assets/choresquad-inbox.PNG" alt="choresquad inbox" />
 
 
 ## API used for this project
